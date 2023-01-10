@@ -1,11 +1,11 @@
 import './css/styles.css';
-import "./fetchCountries";
+import './fetchCountries';
 
-fetch(`https://restcountries.com/v3.1/`)
+fetch(`https://restcountries.com/v2/all?fields=name,capital,currencies`)
 .then((response) => response.json())
 .then((data) => console.log(data));
 
 
 const DEBOUNCE_DELAY = 300;
 
-console.log(`china`);
+
