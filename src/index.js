@@ -10,6 +10,7 @@ const refs = {
     divElem:document.querySelector(`.country-info`),
 }
 
+
 // console.log(refs);
 const DEBOUNCE_DELAY = 300;
 
