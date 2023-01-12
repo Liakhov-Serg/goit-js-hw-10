@@ -43,6 +43,7 @@ function searchCountry(countries) {
 
 }
 
+
 function renderCountryCard(countries) {
     const markupCard = countries.map((({name, capital, population, flags, languages}) => {
         return `<div class = "country-list_item">
