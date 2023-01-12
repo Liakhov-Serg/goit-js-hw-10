@@ -10,11 +10,11 @@ const refs = {
     divElem:document.querySelector(`.country-info`),
 }
 
-console.log(refs);
+// console.log(refs);
 const DEBOUNCE_DELAY = 300;
 
 refs.inputElem.addEventListener("input", debounce(inSearch, DEBOUNCE_DELAY));
-console.log(refs.inputElem);
+// console.log(refs.inputElem);
 
 
 function inSearch(e) {
