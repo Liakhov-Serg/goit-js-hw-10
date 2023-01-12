@@ -27,10 +27,19 @@ function onSearch(e) {
 
 function searchCountry(countries) {
     console.log(countries);
-    if (searchCountry.length >= 10) {
-        Notify.success
-    } else {
+    if (countries.length > 10) {
+        console.log("Too many match");
+            } else if (countries.length > 2 && countries.length > 10) {
+                console.log("render list");
+        renderCountryList(countries)
+    } else if (countries.length === 1) {
+        console.log("render card");
         renderCountryCard(countries)
+    } else {
+        if (countries.length === 0) {
+            throw new Error("404");
+            console.log("Ops");
+        }
     }
 }
 
