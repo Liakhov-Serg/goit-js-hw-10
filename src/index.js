@@ -84,7 +84,6 @@ function clearError (countries) {
     }
     
 }
-
 function clearContainer() {
     refs.listElem.innerHTML = ''; 
     refs.divElem.innerHTML = ''; 
