@@ -60,7 +60,7 @@ function renderCountryCard(countries) {
     console.log(refs.listElem);
 
 refs.divElem.insertAdjacentHTML("beforeend", markupCard);
-console.log(markupCard);
+// console.log(markupCard);
 };
 function renderCountryList(countries) {
     const markup = countries.map((({name, flags}) => {
@@ -89,78 +89,3 @@ function clearContainer() {
     refs.divElem.innerHTML = ''; 
 }
 
-// function countryMarkUp(countries) {
-
-//     {
-//         const countryCard = countries.map((({name, flags}) => {
-//             return `
-//             <img src="${flags.svg}" style="width: 40px; height: 40px"/>
-//             <h2>${name}</h2>
-//             `;
-//         }) ).join("");
-//         console.log(refs.listElem);
-//     refs.listElem.insertAdjacentHTML("beforeend", markupCard);
-//     console.log(markupCard);
-//     };
-//    }
-
-// function searchCountry(countries) {
-//     if (countries.length === 1) {
-//     countryMarkUp(countries);
-//     console.log(countries);    
-//         // console.log("One country");
-//             } else if (countries.length >= 2 && countries.length <= 10) {
-//                 countriesMarkUp(countries);
-//                 console.log("render list");
-//         // renderCountryList(countries)
-//     } else if (countries.length > 10) {
-//         // console.log("render card");
-//         // renderCountryCard(countries)
-//         Notify.info(`"Too many matches found. Please enter a more specific name."`)
-//     } else 
-//     { Notify.failure(`"Oops, there is no country with that name"`)
-//         // if (countries.length === 0) {
-//         //     throw new Error("404");
-//         //     console.log("Ops");
-//         // }
-//     }
-// }
-
-
-// // function clearError(countries) {
-// //     if (countries.length === 0) {
-// //         throw new Error("404");
-// //     } else {
-// //         Notify.failure("Too many matches found. Please enter a more specific name.")
-// //     }
-// // }
-// // //  {
-    
-
-// } else {
-// 
-// }
-// console.log(name);
-
-// .then((response) => response.json())
-// .then((data) => console.log(data));
-
-function createMarkup() {
-    data.forEach((item) => {
-        const elem = "country-list"
-    }
-
-    )
-}
-
-
-
-
-
-
-
-
-
-// if (name.length > 0 && name.trim() !== '') {
-    
-// }
