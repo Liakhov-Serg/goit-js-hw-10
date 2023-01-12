@@ -24,22 +24,40 @@ function onSearch(e) {
     fetchCountres(name)
     .then(data => searchCountry(data))
 }
+function countryMarkUp(countries) {
+
+    {
+        const countryCard = countries.map((({name, flags}) => {
+            return `
+            <img src="${flags.svg}" style="width: 40px; height: 40px"/>
+            <h2>${name}</h2>
+            `;
+        }) ).join("");
+        console.log(refs.listElem);
+    refs.listElem.insertAdjacentHTML("beforeend", markupCard);
+    console.log(markupCard);
+    };
+   }
 
 function searchCountry(countries) {
-    console.log(countries);
-    if (countries.length > 10) {
-        console.log("Too many match");
-            } else if (countries.length > 2 && countries.length > 10) {
+    if (countries.length === 1) {
+    countryMarkUp(countries);
+    console.log(countries);    
+        // console.log("One country");
+            } else if (countries.length >= 2 && countries.length <= 10) {
+                countriesMarkUp(countries);
                 console.log("render list");
-        renderCountryList(countries)
-    } else if (countries.length === 1) {
-        console.log("render card");
-        renderCountryCard(countries)
-    } else {
-        if (countries.length === 0) {
-            throw new Error("404");
-            console.log("Ops");
-        }
+        // renderCountryList(countries)
+    } else if (countries.length > 10) {
+        // console.log("render card");
+        // renderCountryCard(countries)
+        Notify.info(`"Too many matches found. Please enter a more specific name."`)
+    } else 
+    { Notify.failure(`"Oops, there is no country with that name"`)
+        // if (countries.length === 0) {
+        //     throw new Error("404");
+        //     console.log("Ops");
+        // }
     }
 }
 
@@ -89,7 +107,8 @@ function renderCountryCard(countries) {
         </li>`;
     }) ).join("");
     console.log(refs.listElem);
-refs.listElem.insertAdjacentHTML("beforeend", markupCard)
+refs.listElem.insertAdjacentHTML("beforeend", markupCard);
+console.log(markupCard);
 };
 
 
