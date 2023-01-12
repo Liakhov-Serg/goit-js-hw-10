@@ -18,7 +18,7 @@ console.log(document.querySelector(`.country-info`));
 
 
 function onSearch(e) {
-    e.preventDefoult();
+    // e.preventDefoult();
     const name = refs.inputElem.value.trim();
     if (name)
     fetchCountres(name)
@@ -44,20 +44,20 @@ function searchCountry(countries) {
 }
 
 
-function clearError(countries) {
-    if (countries.length === 0) {
-        throw new Error("404");
-    } else {
-        Notify.failure("Too many matches found. Please enter a more specific name.")
-    }
-}
-//  {
+// function clearError(countries) {
+//     if (countries.length === 0) {
+//         throw new Error("404");
+//     } else {
+//         Notify.failure("Too many matches found. Please enter a more specific name.")
+//     }
+// }
+// //  {
     
 
 // } else {
 // 
 // }
-console.log(name);
+// console.log(name);
 
 // .then((response) => response.json())
 // .then((data) => console.log(data));
@@ -79,7 +79,7 @@ function renderCountryCard(countries) {
     const markupCard = countries.map((({name, capital, population, flags, languages}) => {
         return `<li class = "country-list_item">
         <div class = "country-list_title">
-        <img scr = "${flags.svg}" style = "width: 40px; height: 40px"/>
+        <img src="${flags.svg}" style="width: 40px; height: 40px"/>
         <h2>${name}</h2>
         </div>
         <p><strong>Capital:</strong> ${capital}</p>
