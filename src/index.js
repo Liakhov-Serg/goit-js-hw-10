@@ -1,6 +1,6 @@
 import './css/styles.css';
 
-import {fetchСountries}from'./fetchСountries';
+import {fetchCountries} from './fetchCountries';
 import debounce from 'lodash.debounce';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
@@ -26,7 +26,7 @@ function inSearch(e) {
     clearContainer();
     
     if (name)
-    fetchСountries(name)
+    fetchCountries(name)
     .then(data => searchCountry(data))
 }
 
